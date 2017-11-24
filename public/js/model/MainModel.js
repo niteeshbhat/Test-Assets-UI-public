@@ -29,6 +29,7 @@ App.models.MainModel.prototype.createElements = function (data) {
   var token = this.loginModel.getToken();
   var url = App.constants.requestParameter[this.type].CREATE;
 
+  data.createdAt = new Date();
   App.utils.HTTPUtils.post(url, data, token)
     .then(function () {
       q.resolve();
