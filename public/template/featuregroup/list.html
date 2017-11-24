@@ -13,9 +13,7 @@
                     <thead>
                     <th>Name</th>
                     {{#attributes}}
-                    {{#if active}}
                     <th>{{uiName}}</th>
-                    {{/if}}
                     {{/attributes}}
                     {{#if isAdmin}}
                     <th>Created at</th>
@@ -25,9 +23,7 @@
                     <tfoot>
                     <th>Name</th>
                     {{#attributes}}
-                    {{#if active}}
                     <th>{{uiName}}</th>
-                    {{/if}}
                     {{/attributes}}
                     {{#if isAdmin}}
                     <th>Created at</th>
@@ -39,9 +35,7 @@
                     <tr>
                         <td><a href="#featuregroup/details/{{_id}}">{{name}}</a></td>
                         {{#attributes}}
-                        {{#if attribute.active}}
                         <td>{{value}}</td>
-                        {{/if}}
                         {{/attributes}}
                         {{#if ../isAdmin}}
                         <td>{{createdAt}}</td>

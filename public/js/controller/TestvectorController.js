@@ -36,8 +36,11 @@ App.controller.TestvectorController.prototype.actionList = function () {
 
   self.model.getAttributes()
     .then(function (data) {
-      renderData.attributes = data;
       renderData.isAdmin = self.loginModel.isAdmin();
+      if (!renderData.isAdmin) {
+        data = self.filterInactiveAttributes(data);
+      }
+      renderData.attributes = data;
       self.view.renderList(renderData, filterPreferences);
     })
     .catch(function (error) {

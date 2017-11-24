@@ -84,9 +84,7 @@ App.views.TestvectorView.prototype.renderList = function (data, filterPreference
     {data: 'play'},
   ];
   data.attributes.forEach(function (item) {
-    if (item.active) {
       columns.push({data: item.uiName});
-    }
   });
   if (data.isAdmin) {
     columns.push({data: 'createdAt'}, {data: 'updatedAt'});
@@ -125,9 +123,7 @@ App.views.TestvectorView.prototype.renderGroupedList = function (data, filterPre
     {data: 'play'},
   ];
   data.attributes.forEach(function (item) {
-    if (item.active) {
       columns.push({data: item.uiName});
-    }
   });
   if (data.isAdmin) {
     columns.push({data: 'createdAt'}, {data: 'updatedAt'});

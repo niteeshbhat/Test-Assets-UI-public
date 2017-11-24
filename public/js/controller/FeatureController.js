@@ -45,6 +45,9 @@ App.controller.FeatureController.prototype.actionList = function () {
       return self.model.getAttributes();
     })
     .then(function (data) {
+      if (!renderData.isAdmin) {
+        data = self.filterInactiveAttributes(data);
+      }
       renderData.attributes = data;
       self.view.renderList(renderData, filterPreferences);
     })

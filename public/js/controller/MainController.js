@@ -152,6 +152,12 @@ App.controller.MainController.prototype.actionMyList = function () {
     });
 };
 
+App.controller.MainController.prototype.filterInactiveAttributes = function (items) {
+  return items.filter(function (item) {
+    return item.active;
+  })
+};
+
 App.controller.MainController.prototype.filterInactiveTestcases = function (items) {
   var result;
 
