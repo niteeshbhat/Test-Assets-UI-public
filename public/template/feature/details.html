@@ -115,8 +115,10 @@
                                 <p class="title">Last updated at</p>
                                 <p>{{feature.updatedAt}}</p>
                                 {{#feature.attributeInstances}}
+                                {{#if attribute.active}}
                                 <p class="title">{{attribute.uiName}}</p>
                                 <p>{{value}}</p>
+                                {{/if}}
                                 {{/feature.attributeInstances}}
                             </div>
 

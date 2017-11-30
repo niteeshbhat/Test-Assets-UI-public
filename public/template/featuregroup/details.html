@@ -142,8 +142,10 @@
                                 <p class="title">Last updated at</p>
                                 <p>{{featureGroup.updatedAt}}</p>
                                 {{#featureGroup.attributeInstances}}
+                                {{#if attribute.active}}
                                 <p class="title">{{attribute.uiName}}</p>
                                 <p>{{value}}</p>
+                                {{/if}}
                                 {{/featureGroup.attributeInstances}}
                             </div>
 

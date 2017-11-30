@@ -40,10 +40,12 @@
                                     <td>{{testvector.updatedAt}}</td>
                                 </tr>
                                 {{#testvector.attributeInstances}}
+                                {{#if attribute.active}}
                                 <tr>
                                     <th>{{attribute.uiName}}</th>
                                     <td>{{value}}</td>
                                 </tr>
+                                {{/if}}
                                 {{/testvector.attributeInstances}}
                                 </tbody>
                             </table>
